@@ -5,7 +5,7 @@ element.addEventListener("load", function(){
 
 
 
-    var perrow = 3, // 3 items per row
+    var perrow = 6, // 3 items per row
         count = 0, // Flag for current cell
         table = document.createElement("table"),
         row = tableData.insertRow();
@@ -16,7 +16,7 @@ element.addEventListener("load", function(){
 
         // You can also attach a click listener if you want
         cell.addEventListener("click", function(){
-        alert("FOO!");
+        alert("Greetings");
         });
 
         // Break into next row

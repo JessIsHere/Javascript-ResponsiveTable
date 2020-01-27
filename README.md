@@ -89,6 +89,41 @@ Creating A Form:
 
     'input' allows viewer to interact with html. In this exampe we are using type=text. But I changed it to date so you can select a date using a calendar. 
 
+CREATING TABLE AREA:
+
+    Using a colum - I chose 9 because I felt like it an positioned it to the right. I updated the column sizes, positioning, and font. 
+
+import d3, and js files. 
+
+//////////////////////////////////////
+
+JAVASCRIPT NOTES:
+
+1. declaring a variable called "tableData" and setting it = to the "data" variable in the data.js file.
+
+2. We want to add and event listener to an element. For some reason we are not defining the element and I am not sure why...maybe because it's the starter file it doesn't actually have an element definied?  - addEventListener() attaches an event handler to the specified element. - The event we are specifying here is "load". In this case we are using an anonymous function to create our own result when the event occurs. - Anonymous funcations are declared without any named identifier to refer to it. It is a one time use function. - 
+
+    
+
+    3. Within our function we are defining a set of variables;
+        perrow = 3
+        count = 0
+        table = we are referencing the html file (document) and creating an element called table.
+        row = our data stored in the variable we created called tableData and then we are inserting a row. We have the brackets open because we are going to input values into the row rather than passing them in right now. 
+    
+    4. After defining our variables within the function. We are creating a for loop to iterate over our data in the data.js file. 
+    
+        - We are saying that for our variable "i" ( we can call it whatever we want) of our data
+
+            we are going to execute the function .insertCell on our previously defined variable row. We are setting this action = to a variable called cell. 
+
+            then we are saying variable i in our fucntion is equal to retrieving the html content of the element (.innerHTML) within the variable cell we just defined. 
+
+    5. We are continuing our for loop to attach a click listener that creates an alert box on the screen when the cell is clicked. 
+        we are passing the value "Greetings" to the alert method. This is within the anonymous function we created to execute when there is a click on the cell (variable defined previously).
+
+    6. Then our for loop breaks into the next row. 
+
 
 
 
