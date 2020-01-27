@@ -94,20 +94,20 @@ select {
 /* The styles for the parallax */
 .hero {
   position: relative;
-  height: 400px;
+  height: 700px;
   padding: 20px;
   margin: 0;
-  background-image: url("/UFO-level-1/ufo-flying-saucer-animated-gif-image-9.gif");
+  background-image: url("/UFO-level-1/static/images/artem-kovalev-jGN7JUKZcU0-unsplash.jpg");
   background-attachment: fixed;
-  background-position: bottom center;
-  background-size: contain;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero h1 {
-  margin-top: 200px;
+  margin-top: 300px;
   font-size: 0.1rem;
   animation: title 1.2s forwards linear;
-  color: white;
+  color: #6495ED;
 }
 
 .hero p {
@@ -115,6 +115,7 @@ select {
   opacity: 0;
   animation: subtitle 1.2s forwards linear;
   animation-delay: 1.2s;
+  color: #6495ED
 }
 
 /* input placeholder color changes */
