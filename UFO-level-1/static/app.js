@@ -1,13 +1,13 @@
 // from data.js
 var tableData = data;
 
-element.addEventListener("load", function(){
+Element.addEventListener("load", function(){
 
 
 
     var perrow = 6, // 3 items per row
         count = 0, // Flag for current cell
-        table = document.createElement("table"),
+        table = document.createElement("ufo-table"),
         row = tableData.insertRow();
 
     for (var i of tableData) {
