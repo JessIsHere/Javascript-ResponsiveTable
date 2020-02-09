@@ -8,8 +8,8 @@ var tbody = d3.select('tbody');
 tableData.forEach(dictionary => {
     var row = tbody.append('tr');
 
-    Object.entries(dictionary).forEach(([key,value]) => {
-        console.log(key,value);
+    Object.entries(dictionary).forEach(([key ,value]) => {
+        // console.log(key,value);
 
         var cell = row.append('td');
         cell.text(value);
@@ -17,29 +17,32 @@ tableData.forEach(dictionary => {
     });
 }); 
 
-Element.addEventListener("load", function(){
+var button = d3.select('#filter-btn');
+// console.log(button)
+button.on('click', function() { 
+    var htmlSelect = d3.select('#datetime');
 
-    var perrow = 6, // 3 items per row
-        count = 0, // Flag for current cell
-        table = document.createElement("ufo-table"),
-        row = tableData.insertRow();
+    var htmlValue = htmlSelect.property('value');
 
-    for (var i of tableData) {
-        var cell = row.insertCell();
-        cell.innerHTML = i;
+    console.log(htmlValue);
 
-        // You can also attach a click listener if you want
-        cell.addEventListener("click", function(){
-        alert("Greetings");
+    var viewData = tableData.filter(dictionary => dictionary.datetime === htmlValue);
+    // console.log(viewData);
+
+    tbody.html('');
+
+    viewData.forEach(dictionary => {
+        var row = tbody.append('tr');
+
+        Object.entries(dictionary).forEach(([key ,value]) => {
+        // console.log(key,value);
+
+            var cell = row.append('td');
+            cell.text(value);
         });
-
-        // Break into next row
-        count++;
-        if (count%perrow==0) {
-        row = tableData.insertRow();
-        }
-    }
+    });
+});
 
     // ATTACH TABLE TO CONTAINER
-    document.getElementById("table-area").appendChild(tableData);
-    });
+    // document.getElementById("table-area").appendChild(tableData);
+    // });
