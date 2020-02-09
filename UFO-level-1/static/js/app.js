@@ -1,9 +1,23 @@
 // from data.js
 var tableData = data;
 
+var table = d3.select('#ufo-table');
+
+var tbody = d3.select('tbody');
+
+tableData.forEach(dictionary => {
+    var row = tbody.append('tr');
+
+    Object.entries(dictionary).forEach(([key,value]) => {
+        console.log(key,value);
+
+        var cell = row.append('td');
+        cell.text(value);
+    
+    });
+}); 
+
 Element.addEventListener("load", function(){
-
-
 
     var perrow = 6, // 3 items per row
         count = 0, // Flag for current cell
@@ -29,5 +43,3 @@ Element.addEventListener("load", function(){
     // ATTACH TABLE TO CONTAINER
     document.getElementById("table-area").appendChild(tableData);
     });
-
-// YOUR CODE HERE!

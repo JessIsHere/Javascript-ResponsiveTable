@@ -1,11 +1,11 @@
 * {
   box-sizing: border-box;
-  font-family:  'Bangers', cursive;
+  font-family: Ubuntu, sans-serif;
 }
 
 html,
 body {
-  height: 135%;
+  height: 100%;
   padding: 0;
   margin: 0;
 }
@@ -75,14 +75,12 @@ select {
 
 #table-area th {
   text-align: center;
-  font-size: 25px;
 }
 
 #table-area th:first-child,
 #table-area th:nth-child(2),
 #table-area th:nth-child(6) {
   min-width: 70px;
-  text-align: center;
 }
 
 .loader {
@@ -96,20 +94,20 @@ select {
 /* The styles for the parallax */
 .hero {
   position: relative;
-  height: 680px;
-  padding: 10px;
+  height: 550px;
+  padding: 20px;
   margin: 0;
-  background-image: url("/UFO-level-1/static/images/artem-kovalev-jGN7JUKZcU0-unsplash.jpg");
-  background-attachment: scroll;
-  background-position: relative;
-  background-size: contain;
+  background: black;
+  background-image: url("../images/nasa.jpg");
+  background-attachment: fixed;
+  background-position: bottom center;
+  background-size: cover;
 }
 
 .hero h1 {
-  margin-top: 300px;
+  margin-top: 200px;
   font-size: 0.1rem;
   animation: title 1.2s forwards linear;
-  color: #6495ED;
 }
 
 .hero p {
@@ -117,7 +115,6 @@ select {
   opacity: 0;
   animation: subtitle 1.2s forwards linear;
   animation-delay: 1.2s;
-  color: #6495ED
 }
 
 /* input placeholder color changes */
