@@ -1,4 +1,4 @@
-# javascript-challenge
+# Javascript-ResponsiveTable
 
 HTML NOTES:
 
